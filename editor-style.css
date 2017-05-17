@@ -1,0 +1,56 @@
+/*
+  Theme Name: Reginald
+  Description: Used to style the TinyMCE editor.
+*/
+@import url("style.css");
+body {
+  margin: 20px;
+  background-color: white;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.mce-item-table th,
+.mce-item-table td {
+  border: 1px solid #bdbdbd;
+}
+
+.wp-caption-text,
+.gallery-caption,
+.wp-caption-dd {
+  padding: 8px;
+  font-weight: 600;
+}
+
+.gallery-caption {
+  text-align: left;
+}
+
+.gallery,
+.gallery-item {
+  float: none !important;
+}
+
+.gallery-item {
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+}
+
+.post-format-status,
+.post-format-link a {
+  display: block;
+  background-color: #efefef;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  padding: 1em;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.post-format-chat p:nth-child(odd) {
+  background-color: rgba(189, 189, 189, 0.1);
+}

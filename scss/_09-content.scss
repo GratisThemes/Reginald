@@ -1,0 +1,25 @@
+/* 9.0 Content */
+.archive-entry{ margin-bottom: 2.4em; }
+
+.archive-entry.sticky .archive-entry-header h5:before{
+	content: '\f08d';
+	font-family: FontAwesome;
+	padding-right: .5em;
+}
+
+.archive-entry-header h5 a{
+	text-decoration: none;
+
+	&:hover{ text-decoration: underline; }
+}
+
+.archive,
+.home{
+	.site-content .post-thumbnail{ margin-bottom: 1em; }
+}
+
+.content-header{ margin-bottom: 2em; }
+
+.content-title-description p{ margin: 0; }
+
+.post a{ text-decoration: underline; }

@@ -1,0 +1,45 @@
+/* 10.0 Post formats */
+.single-format-video .post{
+  iframe,
+  video,
+  embed,
+  object,
+  .video-player,
+  .videopress-placeholder{
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.single-format-image .post{
+  img,
+  .wp-caption{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.single-format-status .post,
+.single-format-link .post a{
+  display: block;
+  background-color: $buttonColor;
+  border-radius: 2px;
+  padding: 1em;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.single-format-status .post{ margin-bottom: 2.4rem; }
+
+.single-format-link .post a{
+  transition: .25s ease-in-out;
+
+  &:hover{ background-color: $buttonColor - 20; }
+}
+
+.single-format-chat .post p:nth-child(odd){ background-color: rgba($borderColor, .1) }
