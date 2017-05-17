@@ -1,6 +1,6 @@
 # Theme info
 Name: Reginald
-Author: Kniffen (http://knifftech.net)
+Author: Kniffen (http://kniff.xyz)
 License: GNU General Public License v3
 Description: Simple yet elegant and responsive blogging theme. Includes a variety of customizable options and widget areas.
 
