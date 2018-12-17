@@ -3,36 +3,42 @@
  * Template for displaying images
  *
  * @package Reginald
- * @since Reginald 1.2.1
+ * @since 1.0.0
  */
-get_header(); ?>
+?>
 
-<div class="site-content">
-	<main>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part('template-parts/content_header'); ?>
+<?php get_header(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="entry-attachment">
-						<?php echo wp_get_attachment_image( get_the_ID(), 'large' ); ?>
-						<?php the_excerpt(); ?>
-				</div>
-			</article>
+<main id="site-main" role="main">
 
-			<nav id="image-navigation" class="navigation image-navigation">
-				<div class="nav-links">
-					<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'reginald' ) ); ?></div>
-					<div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'reginald' ) ); ?></div>
-				</div><!-- .nav-links -->
-			</nav><!-- .image-navigation -->
+  <?php while ( have_posts() ): the_post(); ?>
 
-			<?php if ( comments_open() || get_comments_number() ):
-				comments_template();
-			endif; ?>
-		<?php endwhile; ?>
-	</main>
+    <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php get_sidebar(); ?>
-</div>
+      <?php get_template_part( 'template-parts/entry', 'header' ); ?>
+      
+      <article class="entry-content">
+        <?php echo wp_get_attachment_image( get_the_ID(), 'large' ); ?>
+        <?php the_excerpt(); ?>
+      </article><!-- .entry-content -->
+
+    </section>
+
+    <footer class="entry-footer">
+      <div class="nav-links image-navigation">
+        <div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'reginald' ) ); ?></div>
+        <div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'reginald' ) ); ?></div>
+      </div><!-- .nav-links -->
+    </footer><!-- .entry-footer -->
+
+    <?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+
+
+  <?php endwhile; ?>
+
+
+</main><!-- #site-main -->
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

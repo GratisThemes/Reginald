@@ -1,25 +1,26 @@
 <?php
 /**
- * Template for displaying posts
+ * Template for displaying songle post content
  *
  * @package Reginald
- * @since Reginald 1.0
+ * @since 1.0.0
  */
-get_header(); ?>
+?>
 
-<?php while( have_posts() ): the_post(); ?>
-	<div class="site-content">
-		<main>
-			<?php get_template_part('template-parts/content_header'); ?>
-			<?php get_template_part('template-parts/content'); ?>
+<?php get_header(); ?>
 
-			<?php if( comments_open() || get_comments_number() ){
-				comments_template();
-			} ?>
-		</main>
+<main id="site-main" role="main">
 
-		<?php get_sidebar(); ?>
-	</div>
-<?php endwhile; ?>
+  <?php while ( have_posts() ): the_post(); ?>
+
+    <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+    <?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+
+  <?php endwhile; ?>
+
+</main><!-- #site-main -->
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

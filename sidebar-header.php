@@ -3,11 +3,16 @@
  * Template for displaying a widget area in the header
  *
  * @package Reginald
- * @since Reginald 1.0
+ * @since 1.0.0
  */
+?>
 
-if ( is_active_sidebar( 'header-widget-area' )  ) : ?>
-	<div id="header-widget-area" class="sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'header-widget-area' ); ?>
-	</div><!-- #header-widget-area .sidebar .widget-area -->
+<?php if ( is_active_sidebar( 'header-widget-area' ) ): ?>
+
+  <div id="widget-area-header" class="widget-area" role="complementary">
+
+    <?php dynamic_sidebar( 'header-widget-area' ); ?>
+
+  </div>
+
 <?php endif; ?>

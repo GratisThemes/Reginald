@@ -1,0 +1,68 @@
+/* Post format: Video */
+.js {
+  .format-video {
+    iframe,
+    embed,
+    object {
+      width: 100%;
+    }
+  }
+}
+
+/* Post format: Aside */
+.format-aside {
+  .entry-meta {
+    font-size: .8rem;
+    font-weight: 600;
+  }
+
+  .entry-content {
+    background-color: var(--color-highlight);
+    padding: 1em;
+  }
+}
+
+/* Post format: Status */
+.format-status {
+  .entry-meta {
+    font-size: .8rem;
+  }
+
+  .entry-content {
+    background-color: var(--color-highlight);
+    padding: 1em;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+/* Post format: Link */
+.format-link {
+  .entry-content {
+    background-color: var(--color-highlight);
+    padding: 1em;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+/* Post format: Quote */
+.format-quote {
+  .entry-content {
+    background-color: var(--color-highlight);
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+/* Post format: Chat */
+.format-chat {
+  .entry-content {
+    background-color: var(--color-highlight);
+    padding: 1em;
+    font-style: italic;
+  }
+}

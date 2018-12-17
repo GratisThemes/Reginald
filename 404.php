@@ -1,22 +1,29 @@
 <?php
 /**
- * Template for displaying 404 pages (not found)
+ * Template for displaying 404 Not Found error
  *
  * @package Reginald
- * @since Reginald 1.0
-*/
-get_header(); ?>
-<div class="site-content">
-  <main>
-    <?php get_template_part('template-parts/content_header'); ?>
- 
-    <p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'reginald' ); ?></p>
-    <p><?php _e( 'It looks like nothing was found at this location.', 'reginald' ); ?></p>
- 
-  </main>
- 
-  <?php get_sidebar();?>
+ * @since 1.0.0
+ */
+?>
 
-</div>
+<?php get_header(); ?>
 
-<?php get_footer();?>
+<main id="site-main" role="main">
+  <section class="error-404 not-found">
+    <header class="page-header">
+      <h1><?php _e( '404 Not Found', 'reginald' ); ?></h1>
+    </header>
+
+    <div class="entry-content">
+      <p>
+        <?php _e( 'Oops! That page can&rsquo;t be found.', 'reginald' ); ?>
+        <br />
+        <?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'reginald' ); ?>
+      </p>
+      <?php get_search_form(); ?>
+    </div><!-- .entry-content -->
+  </section><!-- .error-404 -->
+</main><!-- #site-main -->
+
+<?php get_footer(); ?>

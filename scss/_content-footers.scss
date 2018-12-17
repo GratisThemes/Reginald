@@ -1,0 +1,141 @@
+.entry-footer {
+  display: grid;
+  grid-gap: 2em;
+}
+
+.author-bio {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  grid-gap: 1em;
+  font-size: .8rem;
+
+  .avatar {
+    border-radius: 100%;
+  }
+
+  > div span {
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  > div {
+    display: grid;
+    align-content: start;
+  }
+}
+
+.post-categories-container,
+.post-tags-container {
+  h5 {
+    margin: 0;
+  }
+}
+
+.post-categories {
+  list-style: none;
+  margin: 0;
+}
+
+.post-tags::before,
+.nav-previous a::before,
+.nav-next a::after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.post-tags::before {
+  content: "\f02b";
+  padding-right: .25em;
+}
+
+.nav-previous a::before {
+  content: "\f177";
+  padding-right: .25em;
+}
+
+.nav-next a::after {
+  content: "\f178";
+  padding-left: .25em;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a:not(:first-child) {
+    margin-left: .5em;    
+  }
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  grid-gap: .5em;
+}
+
+.nav-previous a,
+.nav-next a {
+  background-color: var(--color-highlight);
+  padding: 1em;
+  line-height: 3em;
+  text-decoration: none;
+}
+
+.pagination .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 0 .5em 0 0;
+    padding: .5em;
+    background-color: var(--color-highlight);
+    border: 0.0625em dotted var(--color-highlight);
+    border-radius: .15em;
+  }
+
+  .page-numbers.current {
+    background-color: var(--color-container);
+    border: 0.0625em solid var(--color-border)
+  }
+
+  .dots {
+    background-color: transparent;
+    border: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-links {
+    grid-template-columns: repeat(2, minmax(0, auto));
+  }
+
+  .nav-next {
+    text-align: right;
+    grid-column: 2 / 3;
+  }
+}

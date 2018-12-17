@@ -1,0 +1,23 @@
+.widget-area,
+#widget-area-header,
+#widget-areas-footer {
+  display: grid;
+  align-content: start;
+  grid-gap: 2em;
+}
+
+.widget-area,
+#widget-areas-footer {
+  grid-template-columns: minmax(0, 100%);
+  align-content: start;
+}
+
+@media (min-width: 1024px) {
+  #widget-area-header {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #widget-areas-footer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
