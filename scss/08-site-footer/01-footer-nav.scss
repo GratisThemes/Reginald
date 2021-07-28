@@ -1,0 +1,14 @@
+/* 5.2 Navigation: Footer nav */
+.site-footer-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+
+  > * + * {
+    margin-inline-start: 0.5em;
+  }
+}

@@ -1,0 +1,19 @@
+/* Pages/lauout: Attachment */
+.attachment {
+  .entry-meta {
+    justify-content: flex-start;
+  }
+  
+  .entry-content img {
+    display: block;
+    margin-inline: auto;
+  }
+
+  .wp-caption-text {
+    background-color: transparent;
+    font-weight: initial;
+    padding: 0;
+    margin-block: 1em;
+    color: var(--text-color);
+  }
+}

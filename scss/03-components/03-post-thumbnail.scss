@@ -1,0 +1,10 @@
+/* Components: Post thumbnail */
+.post-thumbnail {
+  display: block;
+  margin-block: .5em;
+
+  img {
+    display: block;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,28 @@
+/* Components: Entry tags */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+
+  &__tag {
+    background-color: var(--color-gray-200);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    padding: .25em .5em;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-gray-400);
+    }
+
+    i {
+      color: var(--color-gray-600);
+      margin-inline-end: .5em;
+    }
+
+    a {
+      color: var(--color-gray-900);
+      text-decoration: none;
+    }
+  }
+}

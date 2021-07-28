@@ -1,0 +1,78 @@
+/* Post formats */
+
+/* Post formats: Aside*/
+body:not(.single) article.format-aside {
+  background-color: var(--color-gray-200);
+  border-radius: var(--border-radius);
+  padding: 1em;
+
+  > * + * {
+    margin-block-start: 0;
+  }
+
+  .entry-meta {
+    font-weight: 600;
+    justify-content: flex-start;
+  }
+}
+
+/* Post formats: Chat*/
+body:not(.single) article.format-chat .entry-content {
+  font-family: monospace, monospace;
+}
+
+/* Post formats: Image */
+body:not(.single) article.format-image .entry-content {
+  img,
+  figure {
+    width: 100% !important;
+  }
+}
+
+/* Post formats: Link*/
+body:not(.single) article.format-link .entry-content {
+  font-size: 2rem;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Post formats: Quote*/
+body:not(.single) article.format-quote .entry-content {
+  font-size: 2rem;
+  text-align: center;
+  
+  blockquote {
+    border: none;
+  }
+}
+  
+/* Post formats: Status*/
+body:not(.single) article.format-status {
+  > * + * {
+    margin-block-start: 0;
+  }
+
+  .entry-meta {
+    font-weight: 600;
+    justify-content: flex-start;
+  }
+}
+
+/* Post formats: Video*/
+body:not(.single) article.format-video .entry-content {
+  iframe,
+  embed,
+  object {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    aspect-ratio: attr(width) / attr(height);
+  }
+}

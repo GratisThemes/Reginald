@@ -1,0 +1,30 @@
+/* Widgets: Widget areas */
+.widget-area {
+  > * + * {
+    margin-block-start: 2em;
+  }
+
+  margin-block-end: 2em;
+}
+
+@media (min-width: 68em) {
+  .widget-area-header {
+    margin-block: 4em;
+    
+    > * + * {
+      margin-block-start: 0;
+    }
+  }
+  
+  .widget-area-header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2em;
+  }
+
+  .widget-areas-footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2em;  
+  }
+}

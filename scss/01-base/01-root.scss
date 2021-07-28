@@ -1,0 +1,28 @@
+/* Base: Root */
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  
+  --color-gray-200: #FAFAFA;
+  --color-gray-400: #EEEEEE;
+  --color-gray-600: #BDBDBD;
+  --color-gray-900: #191919;
+
+  --color-blue: #1E73BE;
+
+  --font-family: 'Open Sans', sans-serif;
+  --font-size:   1rem;
+  --font-style:  normal;
+
+  --border-width:  .0625em;
+  --border-style:  solid;
+  --border-color:  var(--color-gray-400);
+  --border-radius: .125em;
+
+  --background-color:           var(--color-blue);
+  --background-color-container: var(--color-white);
+  --text-color:                 var(--color-black);
+  --anchor-color:               var(--color-gray-900);
+  --site-title-color:           var(--color-gray-900);
+  --site-tagline-color:         var(--color-gray-900);
+}

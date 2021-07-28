@@ -1,0 +1,40 @@
+/* Components: Image navigation */
+.image-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+
+  &__previous a,
+  &__next a {
+    display: block;
+    background-color: var(--color-gray-200);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    padding: .5em .75em;
+    color: var(--color-gray-900);
+
+    &:hover {
+      background-color: var(--color-gray-400);
+    }
+  }
+
+  &__previous i {
+    margin-inline-end: .5em;
+  }
+
+  &__next i {
+    margin-inline-start: .5em;
+  }
+}
+
+@media (min-width: 28em) {
+  .image-nav {
+    justify-content: space-between;
+
+    &__next {
+      margin-inline-start: auto;
+    }
+  }
+}

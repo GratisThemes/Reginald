@@ -1,0 +1,119 @@
+/* Base: Typography */
+html {
+  font-family: var(--font-family);
+}
+
+body {
+  font-size: var(--font-size);
+  font-style: var(--font-style);
+  font-weight: 400;
+  color: var(--text-color);
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--anchor-color);
+  text-decoration: underline;
+}
+
+q {
+  font-style: italic;
+}
+
+blockquote {
+  background-color: var(--color-gray-200);
+  margin: 0 0 1em;
+  padding: .85em;
+  border-radius: var(--border-radius);
+  color: var(--color-gray-900);
+
+  p {
+    margin: 0;
+  }
+}
+
+q::before,
+blockquote::before {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "\f10e";
+  font-weight: 900;
+  padding-inline-end: .5em;
+}
+
+blockquote::before {
+  font-size: 1.8rem;
+  color: var(--color-gray-900);
+}
+
+address {
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
+}
+
+code {
+  background-color: var(--color-gray-400);
+  padding-inline: .25em;
+  border-radius: var(--border-radius);
+  color: var(--color-gray-900);
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: var(--border-width);
+  background-color: var(--text-color);
+}
+
+ins {
+  text-decoration: underline;
+}
+
+pre {
+  white-space: pre;
+  max-width: 100%;
+  overflow-x: auto;
+}

@@ -1,0 +1,51 @@
+/* Components: Entry meta */
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: .85rem;
+  gap: .25em;
+
+  .avatar {
+    display: none;
+  }
+
+  i {
+    margin-inline-end: .5em;
+  }
+}
+
+@media (min-width: 68em) {
+  .entry-meta {
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__author {
+      justify-self: flex-start;
+      align-self: flex-start;
+      line-height: 2.5em;
+      flex-grow: 1;
+
+      i {
+        display: none;
+      }
+
+      .avatar {
+        display: inline-block;
+        border-radius: 50%;
+        margin-inline-end: 1em;
+      }
+    }
+
+    &__author,
+    &__date,
+    &__comments {
+      flex-shrink: 0;
+    }
+  }
+
+  article.author-hidden .entry-meta {
+    justify-content: flex-start;
+  }
+}
