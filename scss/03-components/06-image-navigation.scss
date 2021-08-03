@@ -2,7 +2,7 @@
 .image-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1em;
 
   &__previous a,
@@ -26,15 +26,5 @@
 
   &__next i {
     margin-inline-start: .5em;
-  }
-}
-
-@media (min-width: 28em) {
-  .image-nav {
-    justify-content: space-between;
-
-    &__next {
-      margin-inline-start: auto;
-    }
   }
 }

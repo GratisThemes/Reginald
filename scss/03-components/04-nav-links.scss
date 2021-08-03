@@ -2,12 +2,17 @@
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1em;
   margin-block-end: 2em;
 
   a {
     color: var(--text-color);
   }
+}
+
+.pagination .nav-links {
+  justify-content: flex-start;
 }
 
 .nav-previous,
@@ -27,10 +32,6 @@
   &:hover:not(.current) {
     background-color: var(--color-gray-400);
   }
-}
-
-.nav-next {
-  margin-inline-start: auto;
 }
 
 .nav-previous a,
@@ -58,4 +59,14 @@
 .nav-next i,
 .page-numbers.next i {
   margin-left: .5em;
+}
+
+@media (min-width: 48em) {
+  .nav-next {
+    margin-inline-start: auto;
+  }
+
+  .nav-previous ~ .nav-next {
+    margin-inline-start: 0;
+  }
 }
