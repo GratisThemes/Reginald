@@ -76,8 +76,9 @@ fieldset {
 /* Search and Password forms */
 .search-form,
 .post-password-form p:nth-child(2)  {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  row-gap: 1em;
 }
 
 .search-form .search-submit,
@@ -88,4 +89,23 @@ fieldset {
 .post-password-form [type="submit"] {
   border-start-start-radius: 0;
   border-end-start-radius: 0;
+}
+
+.search-form .search-field,
+.post-password-form [type="password"] {
+  width: 100%;
+}
+
+.search-form > label,
+.search-form .search-submit,
+.post-password-form p:nth-child(2) > label,
+.post-password-form [type="submit"] {
+  flex-grow: 1;
+}
+
+@media (min-width: 22em) {
+  .post-password-form p:nth-child(2) {
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
 }
