@@ -5,7 +5,7 @@
   Author: Gratis Themes
   Author URI: https://gratisthemes.kniffen.dev/
   Description: Create a minimalistic website that is responsive and optimized for mobile.
-  Version: 2.0.0
+  Version: 2.1.0
   Requires at least: 5.0
   Tested up to: 5.7
   Requires PHP: 7.0
@@ -597,7 +597,6 @@ th {
 @media (min-width: 28em) {
   table {
     display: table;
-    width: 100%;
     white-space: initial;
   }
 }
@@ -794,13 +793,14 @@ fieldset {
 /* Search and Password forms */
 .search-form,
 .post-password-form p:nth-child(2) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  row-gap: 1em;
 }
 
 .search-form .search-submit,
@@ -814,6 +814,32 @@ fieldset {
   border-end-start-radius: 0;
 }
 
+.search-form .search-field,
+.post-password-form [type=password] {
+  width: 100%;
+}
+
+.search-form > label,
+.search-form .search-submit,
+.post-password-form p:nth-child(2) > label,
+.post-password-form [type=submit] {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 22em) {
+  .post-password-form p:nth-child(2) {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
 /* Classes */
 /* Classes: Alignment */
 .alignright {
@@ -1009,12 +1035,23 @@ fieldset {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1em;
   -webkit-margin-after: 2em;
           margin-block-end: 2em;
 }
 .nav-links a {
   color: var(--text-color);
+}
+
+.pagination .nav-links {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .nav-previous,
@@ -1039,11 +1076,6 @@ fieldset {
 .nav-next:hover:not(.current),
 .page-numbers:not(.dots):hover:not(.current) {
   background-color: var(--color-gray-400);
-}
-
-.nav-next {
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
 }
 
 .nav-previous a,
@@ -1073,6 +1105,17 @@ fieldset {
   margin-right: 0.5em;
 }
 
+@media (min-width: 48em) {
+  .nav-next {
+    -webkit-margin-start: auto;
+            margin-inline-start: auto;
+  }
+
+  .nav-previous ~ .nav-next {
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
+}
 /* Components: Page links */
 .page-links {
   -webkit-margin-before: 2em;
@@ -1123,10 +1166,10 @@ fieldset {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1em;
 }
 .image-nav__previous a, .image-nav__next a {
@@ -1151,18 +1194,6 @@ fieldset {
           margin-inline-start: 0.5em;
 }
 
-@media (min-width: 28em) {
-  .image-nav {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .image-nav__next {
-    -webkit-margin-start: auto;
-            margin-inline-start: auto;
-  }
-}
 /* Components: Entry tags */
 .entry-tags {
   display: -webkit-box;
@@ -1749,7 +1780,7 @@ body.hide-vertical-margin .site-main {
 }
 
 .comment-content,
-.reply {
+.comment .reply {
   margin: 0 !important;
 }
 
@@ -1758,6 +1789,21 @@ body.hide-vertical-margin .site-main {
   margin: 2em 1em 0 0;
 }
 
+.comment + .comment {
+  -webkit-margin-before: 2em;
+          margin-block-start: 2em;
+  border-top: var(--border-width) dashed var(--color-gray-400);
+  -webkit-padding-before: 2em;
+          padding-block-start: 2em;
+}
+
+.comment-meta {
+  white-space: nowrap;
+  font-size: 1rem;
+  display: inline-grid;
+  grid-template-columns: 42px minmax(0, auto);
+  gap: 1em;
+}
 .comment-meta a {
   text-decoration: none;
   color: var(--text-color);
@@ -1765,17 +1811,48 @@ body.hide-vertical-margin .site-main {
 .comment-meta a:hover {
   text-decoration: underline;
 }
-
-.comment-author .avatar {
-  position: relative;
-  float: right;
-  margin-left: 0.5em;
+.comment-meta .comment-author {
+  display: inline-grid;
+  grid-template-columns: 42px minmax(0, auto);
+  grid-column: 1/3;
+  grid-row: 1/3;
+  gap: 1em;
+}
+.comment-meta .comment-author .avatar {
+  grid-column: 1;
+  grid-row: 1/2;
   -webkit-border-radius: 50%;
           border-radius: 50%;
 }
-
-.comment-metadata {
+.comment-meta .comment-author .fn {
+  grid-column: 2;
+  grid-row: 1;
+}
+.comment-meta .comment-author .says {
+  grid-column: 3;
+  grid-row: 1;
+}
+.comment-meta .comment-metadata {
+  grid-row: 2;
+  grid-column: 2;
   font-size: 0.8rem;
+}
+.comment-meta .comment-edit-link {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  -webkit-margin-start: 1em;
+          margin-inline-start: 1em;
+}
+.comment-meta .comment-edit-link:hover {
+  text-decoration: underline;
+}
+
+.comment-content,
+.comment .reply {
+  -webkit-padding-start: -webkit-calc(42px + 1em);
+          padding-inline-start: calc(42px + 1em);
 }
 
 .comment-reply-link {
@@ -1785,8 +1862,6 @@ body.hide-vertical-margin .site-main {
           border-radius: var(--border-radius);
   text-decoration: none;
   padding: 0.25em 0.5em;
-  margin: 0 !important;
-  font-size: 0.8rem;
   color: var(--color-gray-900);
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -1796,11 +1871,6 @@ body.hide-vertical-margin .site-main {
   background-color: var(--color-gray-400);
 }
 
-@media (min-width: 48em) {
-  .comment .children {
-    margin: 2em 2em 0 0;
-  }
-}
 .comment-form label {
   display: block;
 }

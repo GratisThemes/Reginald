@@ -51,7 +51,14 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 
 # Changelog
 
-2.0.0 - 2021.07-28
+2.1.0 - 2021.08.03
+- Reworked comment layout
+- Fixed tables being 100% width
+- Fixed comments title being displayed with 0 comments
+- Improved password and search form responsiveness
+- Improved nav-links responsiveness
+
+2.0.0 - 2021.07.28
 Reginald 2.0 aims to capture the original vision of the theme, but with a more modern and clean approach.
 Some of the biggest changes are as follows. 
 - Improved layout
