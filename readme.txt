@@ -51,6 +51,12 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 
 # Changelog
 
+2.1.1 - 2021.08.10
+- Fixed spacing around pingbacks not being styled the same as comments
+- Fixed comment author alignment
+- Fixed list spacing
++ Fixed social icons spacing
+
 2.1.0 - 2021.08.03
 - Reworked comment layout
 - Fixed tables being 100% width
