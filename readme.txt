@@ -55,7 +55,7 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 - Fixed spacing around pingbacks not being styled the same as comments
 - Fixed comment author alignment
 - Fixed list spacing
-+ Fixed social icons spacing
+- Fixed Space between social icons
 
 2.1.0 - 2021.08.03
 - Reworked comment layout
