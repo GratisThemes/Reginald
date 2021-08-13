@@ -5,7 +5,7 @@
   Author: Gratis Themes
   Author URI: https://gratisthemes.kniffen.dev/
   Description: Create a minimalistic website that is responsive and optimized for mobile.
-  Version: 2.1.2
+  Version: 2.2.0
   Requires at least: 5.0
   Tested up to: 5.7
   Requires PHP: 7.0
@@ -551,7 +551,6 @@ th {
 
 table {
   display: block;
-  border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
   overflow-x: auto;
@@ -559,18 +558,19 @@ table {
   -webkit-margin-after: 1em;
           margin-block-end: 1em;
 }
+@media (min-width: 28em) {
+  table {
+    display: table;
+    white-space: initial;
+    border-collapse: collapse;
+  }
+}
 
 td,
 th {
   padding: 1em;
 }
 
-@media (min-width: 28em) {
-  table {
-    display: table;
-    white-space: initial;
-  }
-}
 /* Base: Forms */
 input,
 textarea,

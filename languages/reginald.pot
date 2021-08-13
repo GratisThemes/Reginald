@@ -44,11 +44,11 @@ msgstr ""
 msgid "Newer comments"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:111
 msgid "Header"
 msgstr ""
 
-#: functions.php:110, inc/actions/customizer.php:435
+#: functions.php:112, inc/actions/customizer.php:435
 msgid "Footer"
 msgstr ""
 
