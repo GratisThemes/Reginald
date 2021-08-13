@@ -1,0 +1,64 @@
+.wp-block-verse {
+  font-family: var(--font-family);
+  padding: .5em 0;
+}
+
+.wp-block-preformatted {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.wp-block-calendar table {
+  display: table;
+  margin-block: 1em;
+}
+
+.wp-block-pullquote {
+  blockquote {
+    background: transparent;
+  }
+}
+
+p.wp-block-cover-text:not(.has-text-color) {
+  color: var(--color-white);
+}
+
+p.wp-block-cover-text a {
+  text-decoration: none;
+}
+
+.wp-block-button a,
+.wp-block-file .wp-block-file__button {
+  background-color: var(--color-gray-200);
+  color: var(--color-black);
+  border: var(--border-width) var(--border-style) var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 1em;
+
+  &:hover {
+    color: var(--color-black);
+  }
+}
+
+.wp-block-button.is-style-outline a {
+  border-color: var(--border-color);
+}
+
+.wp-block-button.is-style-squared a {
+  border-radius: 0;
+}
+
+.wp-block-file .wp-block-file__button {
+  display: table;
+  margin: .5em 0 1em 0;
+  font-size: 1rem;
+}
+
+.wp-block-separator {
+  border: none;
+  width: 25%;
+}
+
+.wp-block-separator.is-style-wide {
+  width: 100%;
+}
