@@ -15,6 +15,29 @@
   text-align: center;
 }
 
+.alignwide {
+  @media (min-width: 64em) {
+    width: calc(100% + 4rem);
+    max-width: calc(100% + 4rem);
+    margin: 0 auto 1em -2rem;
+  }
+}
+
+.alignfull {
+  background-color: var(--background-color-container);
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+
+  p {
+    padding: .5em;
+  }
+  
+  img {
+    border-radius: 0;
+  }
+}
+
 /* Clear floats */
 .entry-content::after {
   content: "";
