@@ -1,10 +1,10 @@
 # Theme
 Name: Reginald
-Author: Gratis Themes (https://gratisthemes.kniffen.dev)
+Author: Gratis Themes (https://gratis-themes.com)
 License: GNU General Public License v3
 
 # Copyright
-Reginald WordPress Theme, Copyright (C) 2016-2021, Gratis Themes
+Reginald WordPress Theme, Copyright (C) 2016-2022, Gratis Themes
 Reginald is distributed under the terms of the GNU GPL v3
 
 This program is free software: you can redistribute it and/or modify
@@ -50,6 +50,9 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------
 
 # Changelog
+
+2.2.1 - 2022.03.18
+- Updated author domain
 
 2.2.0 - 2021.08.13
 - Added basic block styles support

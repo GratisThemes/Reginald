@@ -1,4 +1,4 @@
-# Copyright (C) 2021 reginald
+# Copyright (C) 2022 reginald
 # This file is distributed under the same license as the reginald package.
 msgid ""
 msgstr ""
